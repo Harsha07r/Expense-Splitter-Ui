@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+Expense Sharing App This is a simple full-stack expense sharing application where users can create groups, add shared expenses, and see who owes whom. The goal of this project was to build a clean and functional system similar to basic expense-splitting apps.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Links
 
-## Available Scripts
+Frontend: https://expense-splitter-ui-opal.vercel.app/ Backend API: https://expense-sharing-w13r.onrender.com/
 
-In the project directory, you can run:
+What the App Does
 
-### `npm start`
+Users can be created and reused across multiple groups Groups are created by selecting existing users Expenses can be added to a group and are split equally The app automatically calculates balances Users can see how much they owe or are owed Data is stored persistently using MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Tech Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Frontend React (Create React App) Context API Plain CSS Deployed on Vercel
 
-### `npm test`
+Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js Express.js MongoDB Atlas Mongoose Deployed on Render How the App Is Structured Users exist independently of groups Groups only reference user IDs Expenses belong to groups Balances are calculated based on group expenses Frontend and backend are deployed separately and communicate via REST APIs Running the Project Locally Backend npm install npm start
 
-### `npm run build`
+Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+cd expense-sharing-ui npm install npm start Environment Variables Backend MONGO_URI=your_mongodb_connection_string
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend REACT_APP_API_URL=https://expense-sharing-w13r.onrender.com Notes The UI is intentionally simple and focused on functionality Duplicate users during testing can appear if created multiple times The project was built with correctness and real-world behavior in mind
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Author
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Harsha Vardhan Built as part of an internship assignment
